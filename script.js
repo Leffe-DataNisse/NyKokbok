@@ -8,11 +8,11 @@ const ingrediensRegister = {
         kolhydrater: 0.0,
         socker: 0.0,
         protein: 20.0,
-        pris: 25.00,
+        pris: 15.00,
         enhet: 100
     },
     Innanlar: {
-        namn: "Lövbiff av innanlår",
+        namn: "Innanlår",
         allergen: "",
         energi_kj: 464,
         energi_kcal: 110,
@@ -20,7 +20,19 @@ const ingrediensRegister = {
         kolhydrater: 0.5,
         socker: 0.5,
         protein: 24.0,
-        pris: 20.30,
+        pris: 20.00,
+        enhet: 100
+    },
+    Not_File: {
+        namn: "Nötfilé",
+        allergen: "",
+        energi_kj: 464,
+        energi_kcal: 110,
+        fett: 1.6,
+        kolhydrater: 0.5,
+        socker: 0.5,
+        protein: 24.0,
+        pris: 35.00,
         enhet: 100
     },
     Notfars: {
@@ -95,8 +107,32 @@ const ingrediensRegister = {
         pris: 5.00,
         enhet: 100
     },
+    Aggula: {
+        namn: "Äggula",
+        allergen: "Ägg",
+        energi_kj: 575,
+        energi_kcal: 137,
+        fett: 9.7,
+        kolhydrater: 0.6,
+        socker: 0.6,
+        protein: 12.6,
+        pris: 5.00,
+        enhet: 100
+    },
+    Aggvita: {
+        namn: "Äggvita",
+        allergen: "Ägg",
+        energi_kj: 575,
+        energi_kcal: 137,
+        fett: 9.7,
+        kolhydrater: 0.6,
+        socker: 0.6,
+        protein: 12.6,
+        pris: 5.00,
+        enhet: 100
+    },
     Mjolk: {
-        namn: "Färsk standardmjölk",
+        namn: "Mjölk 3%",
         allergen: "Mjölk",
         energi_kj: 248,
         energi_kcal: 59,
@@ -129,6 +165,18 @@ const ingrediensRegister = {
         socker: 0.0,
         protein: 0.5,
         pris: 6.00,
+        enhet: 100
+    },
+    CremeFraiche: {
+        namn: "Crème Fraiche 34%",
+        allergen: "Mjölk",
+        energi_kj: 1421,
+        energi_kcal: 345,
+        fett: 34.0,
+        kolhydrater: 3.2,
+        socker: 3.2,
+        protein: 2.3,
+        pris: 5.39,
         enhet: 100
     },
     Potatis: {
@@ -191,6 +239,18 @@ const ingrediensRegister = {
         pris: 10.00,
         enhet: 100
     },
+    Persilja: {
+        namn: "Persilja",
+        allergen: "",
+        energi_kj: 150,
+        energi_kcal: 36,
+        fett: 0.5,
+        kolhydrater: 7.0,
+        socker: 0.0,
+        protein: 3.9,
+        pris: 10.00,
+        enhet: 100
+    },
     Vetemjol: {
         namn: "Vetemjöl",
         allergen: "Gluten",
@@ -204,7 +264,7 @@ const ingrediensRegister = {
         enhet: 100
     },
     Strosocker: {
-        namn: "Garant Strösocker",
+        namn: "Strösocker",
         allergen: "",
         energi_kj: 1700,
         energi_kcal: 400,
@@ -264,7 +324,7 @@ const ingrediensRegister = {
         enhet: 100
     },
     HPsauce: {
-        namn: "Heinz HP Sauce",
+        namn: "HP Sauce",
         allergen: "Gluten",
         energi_kj: 517,
         energi_kcal: 122,
@@ -276,7 +336,7 @@ const ingrediensRegister = {
         enhet: 100
     },
     Kapris: {
-        namn: "Zeta Kapris Små",
+        namn: "Kapris Små",
         allergen: "",
         energi_kj: 83,
         energi_kcal: 20,
@@ -288,7 +348,7 @@ const ingrediensRegister = {
         enhet: 100
     },
     Sardell: {
-        namn: "Zeta Sardeller",
+        namn: "Sardeller",
         allergen: "Fisk",
         energi_kj: 2084,
         energi_kcal: 501,

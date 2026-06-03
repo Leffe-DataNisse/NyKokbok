@@ -17,31 +17,51 @@
 
         <!-- SIDOPANEL -->
         <aside class="sidebar">
-            <h2>Register</h2>
-            <ul id="recipe-list">
+            <div class="sidebar-header">
+                <span>Register</span>
+            </div>
+
+            <div class="pretty-select">
+                <div class="select-display" id="selectDisplay">Alla</div>
+                <ul class="select-options" id="selectOptions">
+                    <li data-value="alla">Alla</li>
+                    <li data-value="kott">Kött</li>
+                    <li data-value="fisk">Fisk</li>
+                    <li data-value="brod">Bröd</li>
+                    <li data-value="saser">Såser</li>
+                    <li data-value="efterratter">Efterrätter</li>
+                </ul>
+            </div>
+
+            <ul id="recipe-list" class="sidebar-list">
                 <!-- Lägg till dina recept här -->
-                <li><a href="#" data-file="Biff_a_la_Lindstrom.htm">Biff á la Lindström</a></li>
-                <li><a href="#" data-file="Biff_Rydberg.htm">Biff Rydberg</a></li>
-                <li><a href="#" data-file="Bearnaisesas.htm">Bearnaisesås</a></li>
-                <li><a href="#" data-file="Biff_Special.htm">Biff Special</a></li>
-                <li><a href="#" data-file="Biff_Stroganoff.htm">Biff Stroganoff</a></li>
-                <li><a href="#" data-file="Boeuf_bourguignon.htm">Boeuf bourguignon</a></li>
-                <li><a href="#" data-file="Danskt_ragbrod_surdeg.htm">Danskt ragbröd med surdeg</a></li>
-                <li><a href="#" data-file="Dillkott_1.htm">Dillkött</a></li>
-                <li><a href="#" data-file="Dillkott_2.htm">Dillkött</a></li>
-                <li><a href="#" data-file="Kaldolmar_1.htm">Kåldolmar</a></li>
-                <li><a href="#" data-file="Kaldolmar_2.htm">Kåldolmar</a></li>
-                <li><a href="#" data-file="Kalops_1.htm">Kalops</a></li>
-                <li><a href="#" data-file="Kalops_2.htm">Kalops</a></li>
-            </ul>
-            <!-- fortsätt fylla på -->
+                <li data-cat="saser"><a href="#" data-file="Bearnaisesas.htm">Bearnaisesås</a></li>
+                <li data-cat="kott"><a href="#" data-file="Biff_a_la_Lindstrom.htm">Biff á la Lindström</a></li>   
+                <li data-cat="kott"><a href="#" data-file="Biff_Rydberg.htm">Biff Rydberg</a></li>
+                <li data-cat="kott"><a href="#" data-file="Biff_Special.htm">Biff Special</a></li>
+                <li data-cat="kott"><a href="#" data-file="Biff_Stroganoff.htm">Biff Stroganoff</a></li>
+                <li data-cat="kott"><a href="#" data-file="Boeuf_bourguignon.htm">Boeuf bourguignon</a></li>
+                <li data-cat="brod"><a href="#" data-file="Danskt_ragbrod_surdeg.htm">Danskt ragbröd med surdeg</a></li>
+                <li data-cat="kott"><a href="#" data-file="Dillkott_1.htm">Dillkött</a></li>
+                <li data-cat="kott"><a href="#" data-file="Dillkott_2.htm">Dillkött</a></li>
+                <li data-cat="fisk"><a href="#" data-file="Gravad_Lax.htm">Gravad lax</a></li>
+                <li data-cat="saser"><a href="#" data-file="Hovmastarsas.htm">Hovmästarsås</a></li>
+                <li data-cat="fisk"><a href="#" data-file="Inkokt_Lax.htm">Inkokt lax</a></li>
+                <li data-cat="kott"><a href="#" data-file="Kalops_1.htm">Kalops</a></li>
+                <li data-cat="kott"><a href="#" data-file="Kalops_2.htm">Kalops</a></li>
+                <li data-cat="fisk"><a href="#" data-file="Kraftstromming.htm">Kräftströmming</a></li>
+                <li data-cat="kott"><a href="#" data-file="Kaldolmar_1.htm">Kåldolmar</a></li>
+                <li data-cat="kott"><a href="#" data-file="Kaldolmar_2.htm">Kåldolmar</a></li>
+                <li data-cat="fisk"><a href="#" data-file="Laxpudding.htm">Laxpudding</a></li>
+                <li data-cat="kott"><a href="#" data-file="Sjomansbiff.htm">Sjömansbiff</a></li>
+                <li data-cat="kott"><a href="#" data-file="Wallenbergare.htm">Wallenbergare</a></li>
             </ul>
         </aside>
 
         <!-- HUVUDINNEHÅLL -->
-         <div class="content">
+        <div class="content">
             <main class="content" id="content">
-            <p>Välj ett recept i listan.</p>
+                <p>Välj ett recept i listan.</p>
             </main>
 
 
@@ -76,6 +96,29 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        const display = document.getElementById('selectDisplay');
+        const options = document.getElementById('selectOptions');
+
+        display.addEventListener('click', () => {
+            options.style.display = options.style.display === 'block' ? 'none' : 'block';
+        });
+
+        options.querySelectorAll('li').forEach(li => {
+            li.addEventListener('click', () => {
+                display.textContent = li.textContent;
+                options.style.display = 'none';
+
+                document.querySelectorAll('.sidebar-list li').forEach(item => {
+                    item.style.display = (li.dataset.value === 'alla' || item.dataset.cat === li.dataset.value)
+                        ? 'block'
+                        : 'none';
+                });
+            });
+        });
+    </script>
+    
+
 </body>
 
 </html>

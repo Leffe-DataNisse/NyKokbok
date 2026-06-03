@@ -79,15 +79,55 @@ header h1 {
     box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar h2 {
-    color: var(--primary);
-    font-size: 1.2rem;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
+
+/* Register-rubrik */
+.sidebar-header {
+    position: sticky;
+    top: 0;
+     background-color: #E6B9B8;
+    padding: 6px 10px;
     font-style: italic;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #d6cfc2;
+    z-index: 20;
 }
+
+/* Snygg egen dropdown */
+.pretty-select {
+    position: sticky;
+    top: 28px;
+    background-color: #E6B9B8;
+    padding: 6px 10px;
+    border-bottom: 1px solid #d6cfc2;
+    z-index: 19;
+}
+
+.select-display {
+    background-color: #E6B9B8;
+    border: 1px solid #E6B9B8;
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.select-options {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #E6B9B8;
+    background-color: #E6B9B8;
+}
+
+.select-options li {
+    padding: 4px 6px;
+    cursor: pointer;
+}
+
+.select-options li:hover {
+    background-color: #e8e2d6;
+}
+
 
 /* --- Receptlista --- */
 #recipe-list {
