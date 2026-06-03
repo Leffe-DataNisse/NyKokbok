@@ -2,51 +2,85 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Biff á la Lindström</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Den Gamla Kokboken</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="recipe">
+    <header>
+        <h1>Den Gamla Kokboken</h1>
+    </header>
 
-    <!-- Rubrik + metadata -->
-    <div class="recipe-header">
-        <h2 class="RecNamn">Biff á la Lindström</h2>
-        <p class="Kategori">KÖTT – <i>Färsrätter</i></p>
-        <p class="servings-info">4 portioner</p>
-        <p class="source">Källa: Stora kokboken 1958</p>
+    <div class="container">
+
+        <!-- SIDOPANEL -->
+        <aside class="sidebar">
+            <h2>Register</h2>
+            <ul id="recipe-list">
+                <li><a href="#" data-load="Biff_Lindstrom">Biff á la Lindström</a></li>
+                <li><a href="#" data-load="Dillkott">Dillkött</a></li>
+                <!-- fler recept läggs här -->
+            </ul>
+        </aside>
+
+        <!-- HUVUDINNEHÅLL -->
+        <main class="content" id="content">
+            <p>Välj ett recept i listan.</p>
+        </main>
+
     </div>
 
-    <!-- Beskrivning / historik -->
-    <div class="Beskrivning">
-        <p>En av flera historier om biffen är att den ska ha serverats första gången på Hotell Witt i Kalmar år 1862 då en gäst med namnet Lindström önskade en rätt han hade ätit i S:t Petersburg.</p>
-    </div>
+    <!-- RECEPT SOM TEMPLATES -->
+    <template id="Biff_Lindstrom">
+        <article data-portioner="4">
+            <h2>Biff á la Lindström</h2>
+            <p>Leif Mannerströms klassiska variant.</p>
 
-    <!-- Ingredienser -->
-    <div class="ingredients-section">
-        <h3>Ingredienser</h3>
-        <ul class="ingredient-list">
-            <li>½ kg oxfärs</li>
-            <li>2 kokta potatisar</li>
-            <li>2–3 äggulor</li>
-        </ul>
-    </div>
+            <h3>Ingredienser</h3>
+            <ul>
+                <li data-ing="Notfars" data-mangd="500">500 g nötfärs</li>
+                <li data-ing="Blandfars" data-mangd="100">100 g blandfärs</li>
+                <li data-ing="Lok" data-mangd="100">1 gul lök</li>
+                <!-- osv -->
+            </ul>
 
-    <!-- Instruktioner -->
-    <div class="instructions-section">
-        <h3>Gör så här</h3>
-        <ol>
-            <li>Finhacka löken…</li>
-            <li>Blanda färsen…</li>
-            <li>Stek biffarna…</li>
-        </ol>
-    </div>
+            <h3>Gör så här</h3>
+            <ol>
+                <li>Hacka lök, kapris och rödbetor.</li>
+                <li>Blanda färsen med alla ingredienser.</li>
+                <li>Stek biffarna.</li>
+            </ol>
 
-    <!-- Tips -->
-    <div class="tip">
-        TIPS: Samma färssmet kan användas till Parisare.
-    </div>
+            <h3>Information per portion</h3>
+            <div class="info"></div>
+        </article>
+    </template>
 
-</div>
+    <template id="Dillkott">
+        <article data-portioner="4">
+            <h2>Dillkött</h2>
+            <p>Klassiskt recept av Tore Wretman.</p>
+
+            <h3>Ingredienser</h3>
+            <ul>
+                <li data-ing="Lammbringa" data-mangd="1500">1½ kg lammbringa</li>
+                <li data-ing="Salt" data-mangd="0.75">¾ msk salt</li>
+                <!-- osv -->
+            </ul>
+
+            <h3>Gör så här</h3>
+            <ol>
+                <li>Blanchera köttet.</li>
+                <li>Koka med grönsaker och kryddor.</li>
+                <li>Gör dillsåsen.</li>
+            </ol>
+
+            <h3>Information per portion</h3>
+            <div class="info"></div>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
 </body>
 </html>

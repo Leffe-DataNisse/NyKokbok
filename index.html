@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,17 +34,48 @@
                 <li><a href="#" data-file="Kalops_1.htm">Kalops</a></li>
                 <li><a href="#" data-file="Kalops_2.htm">Kalops</a></li>
             </ul>
-                <!-- fortsätt fylla på -->
+            <!-- fortsätt fylla på -->
             </ul>
         </aside>
 
         <!-- HUVUDINNEHÅLL -->
-        <main class="content" id="content">
+         <div class="content">
+            <main class="content" id="content">
             <p>Välj ett recept i listan.</p>
-        </main>
+            </main>
 
+
+
+            <!-- När ett recept laddas, visa denna ruta med näringsinformation -->
+            <div id="nutritionInfo" class="nutrition-info hidden">
+                <h4>Information per portion</h4>
+
+                <div class="allergen-list">
+                    Allergener: <span id="allergenList">Inga</span>
+                </div>
+
+                <div class="nutrition-grid">
+                    <div class="nutrition-item"><span>Energi:</span>
+                        <span id="energiInfo">0 kj / 0 kcal</span>
+                    </div>
+                    <div class="nutrition-item"><span>Fett:</span>
+                        <span id="fettInfo">0 g</span>
+                    </div>
+                    <div class="nutrition-item"><span>Kolhydrater:</span>
+                        <span id="kolhInfo">0 g</span>
+                    </div>
+                    <div class="nutrition-item"><span>Protein:</span>
+                        <span id="proteinInfo">0 g</span>
+                    </div>
+                </div>
+
+                <div class="price-info">
+                    Pris: ca <span id="prisInfo">0,00</span> kr/port
+                </div>
+            </div>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
+
 </html>

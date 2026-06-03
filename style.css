@@ -304,15 +304,13 @@ header h1 {
         overflow: visible !important;
     }
 
+    /* DÖLJ NÄRINGSRUTAN HELT */
     .nutrition-info {
-        background-color: #f9f7f0 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        border: 1px solid var(--border) !important;
+        display: none !important;
     }
     
     /* Ser till att listorna inte klipps fult mellan sidor */
-    .ingredient-list, ol, .nutrition-info {
+    .ingredient-list, ol {
         page-break-inside: avoid;
     }
 }
