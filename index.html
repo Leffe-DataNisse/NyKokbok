@@ -21,6 +21,7 @@
                 <span>Register</span>
             </div>
 
+            <!-- ComboBox -->
             <div class="pretty-select">
                 <div class="select-display" id="selectDisplay">Alla</div>
                 <ul class="select-options" id="selectOptions">
@@ -33,8 +34,9 @@
                 </ul>
             </div>
 
+            <!-- Receptlistan  -->
             <ul id="recipe-list" class="sidebar-list">
-                <!-- Lägg till dina recept här -->
+            
                 <li data-cat="saser"><a href="#" data-file="Bearnaisesas.htm">Bearnaisesås</a></li>
                 <li data-cat="kott"><a href="#" data-file="Biff_a_la_Lindstrom.htm">Biff á la Lindström</a></li>   
                 <li data-cat="kott"><a href="#" data-file="Biff_Rydberg.htm">Biff Rydberg</a></li>
@@ -58,7 +60,7 @@
             </ul>
         </aside>
 
-        <!-- HUVUDINNEHÅLL -->
+        <!-- HUVUDINNEHÅLL Recept.htm -->
         <div class="content">
             <main class="content" id="content">
                 <p>Välj ett recept i listan.</p>
@@ -95,7 +97,11 @@
             </div>
         </div>
     </div>
+    
+    <!-- Ladda JavaScript -->
     <script src="script.js"></script>
+
+    <!-- JavaScript för att hantera ComboBox och filtrering -->
     <script>
         const display = document.getElementById('selectDisplay');
         const options = document.getElementById('selectOptions');
